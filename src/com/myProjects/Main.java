@@ -8,6 +8,7 @@ public class Main {
         System.out.println("Enter ChessPiece and current position Format- King D5");
         Scanner sc= new Scanner(System.in);
         String input= sc.next();
+        ChessPiece piece = ChessPieceFactory.getChessPiece(input);
     }
 
 }
