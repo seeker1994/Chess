@@ -13,7 +13,8 @@ public class testChessPieceFactory {
         String input = "ROOK D5";
         ChessPiece chessPiece= ChessPieceFactory.getChessPiece(input);
         assertTrue(chessPiece instanceof Rook);
-        assertEquals(chessPiece.getCurrentPos(), "D5");
+        assertEquals(chessPiece.getCurrentPos().getRow(), 4);
+        assertEquals(chessPiece.getCurrentPos().getColumn(), 5);
     }
 
     @Test

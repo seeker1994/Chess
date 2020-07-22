@@ -4,17 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ChessPiece {
-    private String currentPos;
+    private Cell currentPos;
 
-    public String getCurrentPos() {
+    public Cell getCurrentPos() {
         return currentPos;
     }
 
-    public void setCurrentPos(String currentPos) {
+    public void setCurrentPos(Cell currentPos) {
         this.currentPos = currentPos;
     }
 
-    private List<String> nextPossibleMoves(){
+    public List<String> nextPossibleMoves() {
         return new ArrayList<String>();
     }
 }
