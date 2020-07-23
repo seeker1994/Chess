@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-javac ./src/com/myProjects/Main.java
 cd src
+javac ./com/myProjects/Main.java
+
 java com/myProjects/Main
