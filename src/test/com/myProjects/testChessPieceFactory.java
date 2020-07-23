@@ -18,6 +18,15 @@ public class testChessPieceFactory {
     }
 
     @Test
+    public void shouldReturnValidChesspieceOnValidInputIrrespectiveOfCase(){
+        String input = "king d5";
+        ChessPiece chessPiece= ChessPieceFactory.getChessPiece(input);
+        assertTrue(chessPiece instanceof King);
+        assertEquals(chessPiece.getCurrentPos().getRow(), 4);
+        assertEquals(chessPiece.getCurrentPos().getColumn(), 5);
+    }
+
+    @Test
     public void shouldRaiseExeptionForInValidInput(){
         String input = "invalid piece D5";
         ChessPiece chessPiece= ChessPieceFactory.getChessPiece(input);

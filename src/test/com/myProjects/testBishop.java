@@ -5,6 +5,7 @@ import com.myProjects.ChessPieceFactory;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static junit.framework.TestCase.assertTrue;
@@ -13,10 +14,7 @@ public class testBishop {
     public void testShouldGiveCorrectBishopMoves(){
         ChessPiece bishop= ChessPieceFactory.getChessPiece("BISHOP D3");
         List<String> possibleMoves = new ArrayList<>();
-        possibleMoves.add("C2"); possibleMoves.add("B1"); possibleMoves.add("C4");
-        possibleMoves.add("B5"); possibleMoves.add("A6"); possibleMoves.add("E2");
-        possibleMoves.add("F1"); possibleMoves.add("E4"); possibleMoves.add("F5");
-        possibleMoves.add("G6"); possibleMoves.add("H7");
+        Collections.addAll(possibleMoves, "C2", "B1", "C4", "B5", "A6", "E2", "F1", "E4", "F5", "G6", "H7");
         List<String> expectedMoves= bishop.nextPossibleMoves();
         assertTrue(expectedMoves.containsAll(possibleMoves));
     }
@@ -25,9 +23,7 @@ public class testBishop {
     public void testShouldGiveCorrectBishopMoves2(){
         ChessPiece bishop= ChessPieceFactory.getChessPiece("BISHOP A1");
         List<String> possibleMoves = new ArrayList<>();
-        possibleMoves.add("B2"); possibleMoves.add("C3"); possibleMoves.add("D4");
-        possibleMoves.add("E5"); possibleMoves.add("F6"); possibleMoves.add("G7");
-        possibleMoves.add("H8");
+        Collections.addAll(possibleMoves,"B2","C3","D4","E5","F6","G7","H8");
         List<String> expectedMoves= bishop.nextPossibleMoves();
         assertTrue(expectedMoves.containsAll(possibleMoves));
     }

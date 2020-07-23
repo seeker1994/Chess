@@ -10,14 +10,15 @@ import java.util.List;
 
 import static junit.framework.TestCase.assertTrue;
 
-public class testHorse {
+public class testQueen {
 
     @Test
-    public void testPossibleMovesForKing(){
-        ChessPiece horse= ChessPieceFactory.getChessPiece("Horse D3");
+    public void testShouldGiveCorrectBishopMoves(){
+        ChessPiece queen= ChessPieceFactory.getChessPiece("QUEEN A1");
         List<String> possibleMoves = new ArrayList<>();
-        Collections.addAll(possibleMoves,"B2","B4","F2","F4","C1","E1","C5","E5");
-        List<String> expectedMoves= horse.nextPossibleMoves();
+        Collections.addAll(possibleMoves, "B2", "C3", "D4", "E5", "F6", "G7", "H8", "B1", "C1", "D1",
+                "E1", "F1", "G1", "H1", "A2", "A3", "A4", "A5", "A6", "A7", "A8");
+        List<String> expectedMoves= queen.nextPossibleMoves();
         assertTrue(expectedMoves.containsAll(possibleMoves));
     }
 }
