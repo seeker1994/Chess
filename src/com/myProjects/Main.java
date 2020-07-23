@@ -1,5 +1,6 @@
 package com.myProjects;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -23,7 +24,19 @@ public class Main {
             Scanner sc = new Scanner(System.in);
             String input = sc.nextLine();
             ChessPiece piece = ChessPieceFactory.getChessPiece(input);
-            System.out.println(piece.nextPossibleMoves());
+            List<String> possiblesMoves= piece.nextPossibleMoves();
+            StringBuilder availableMoves= new StringBuilder();
+            for(String move: possiblesMoves){
+                availableMoves.append(move);
+                availableMoves.append(" ");
+            }
+            if(availableMoves.length()==0){
+                System.out.println("No Moves Possible");
+                return;
+            }
+
+            System.out.println(availableMoves.toString().trim());
+
         }
         catch (Exception e){
             System.out.println(e.getMessage());
