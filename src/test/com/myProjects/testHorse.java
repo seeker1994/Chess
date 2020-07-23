@@ -17,7 +17,7 @@ public class testHorse {
         ChessPiece horse= ChessPieceFactory.getChessPiece("Horse D3");
         List<String> possibleMoves = new ArrayList<>();
         Collections.addAll(possibleMoves,"B2","B4","F2","F4","C1","E1","C5","E5");
-        List<String> expectedMoves= horse.nextPossibleMoves();
-        assertTrue(expectedMoves.containsAll(possibleMoves));
+        List<String> actualMoves= horse.nextPossibleMoves();
+        assertTrue(actualMoves.containsAll(possibleMoves));
     }
 }

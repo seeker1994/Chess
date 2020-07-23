@@ -17,8 +17,8 @@ public class testKing {
         ChessPiece king= ChessPieceFactory.getChessPiece("KING D3");
         List<String> possibleMoves = new ArrayList<>();
         Collections.addAll(possibleMoves, "C2", "C3", "C4", "D2", "D4", "E2", "E3", "E4");
-        List<String> expectedMoves= king.nextPossibleMoves();
-        assertTrue(expectedMoves.containsAll(possibleMoves));
+        List<String> actualMoves= king.nextPossibleMoves();
+        assertTrue(actualMoves.containsAll(possibleMoves));
     }
 
 }

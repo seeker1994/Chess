@@ -13,18 +13,18 @@ public class testPawn {
 
     @Test
     public void testPossibleMovesForPawn(){
-        ChessPiece king= ChessPieceFactory.getChessPiece("PAWN D3");
+        ChessPiece pawn= ChessPieceFactory.getChessPiece("PAWN D3");
         List<String> possibleMoves = new ArrayList<>();
         possibleMoves.add("E3");
-        List<String> expectedMoves= king.nextPossibleMoves();
-        assertTrue(expectedMoves.containsAll(possibleMoves));
+        List<String> actualMoves= pawn.nextPossibleMoves();
+        assertTrue(actualMoves.containsAll(possibleMoves));
     }
 
     @Test
     public void testPossibleMovesForPawn_No_Moves(){
-        ChessPiece king= ChessPieceFactory.getChessPiece("PAWN H8");
-        List<String> expectedMoves= king.nextPossibleMoves();
-        assertTrue(expectedMoves.isEmpty());
+        ChessPiece pawn= ChessPieceFactory.getChessPiece("PAWN H8");
+        List<String> actualMoves= pawn.nextPossibleMoves();
+        assertTrue(actualMoves.isEmpty());
     }
 
 }

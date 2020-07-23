@@ -18,8 +18,8 @@ public class testRook {
         List<String> possibleMoves = new ArrayList<>();
         Collections.addAll(possibleMoves,"C3","B3","A3","E3","F3","G3","H3","D2","D1","D4","D5",
                 "D6","D7","D8");
-        List<String> expectedMoves= bishop.nextPossibleMoves();
-        assertTrue(expectedMoves.containsAll(possibleMoves));
+        List<String> actualMoves= bishop.nextPossibleMoves();
+        assertTrue(actualMoves.containsAll(possibleMoves));
     }
 
 
@@ -28,8 +28,8 @@ public class testRook {
         ChessPiece rook= ChessPieceFactory.getChessPiece("ROOK H8");
         List<String> possibleMoves = new ArrayList<>();
         Collections.addAll(possibleMoves,"H7","H6","H5" ,"H4","H3","H2" ,"H1");
-        List<String> expectedMoves= rook.nextPossibleMoves();
-        assertTrue(expectedMoves.containsAll(possibleMoves));
+        List<String> actualMoves= rook.nextPossibleMoves();
+        assertTrue(actualMoves.containsAll(possibleMoves));
     }
 
 }
